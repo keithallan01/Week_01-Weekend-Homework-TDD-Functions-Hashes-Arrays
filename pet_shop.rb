@@ -29,3 +29,7 @@ end
 def find_pet_by_name(pet_shop, pet_name)
   return pet_shop[:pets].select {|pet| pet[:name] == pet_name}.first
 end
+
+def remove_pet_by_name(pet_shop, pet_name)
+  return pet_shop[:pets].delete_if {|pet| pet[:name] == pet_name}
+end
